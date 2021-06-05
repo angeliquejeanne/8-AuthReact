@@ -1,19 +1,10 @@
 <h1 align="center" style="border-bottom: none !important; margin-bottom: 5px !important; text-decoration: none; font-size: 34px; color: #a89274;">
-    Bienvenue sur le Projet 7 - Créez un réseau social d’entreprise du parcours développeur web d'OpenClassrooms
+    Cours n°8/10 de React
 </h1>
 <h2 align="center" style="border-bottom: none !important; margin-bottom: 5px !important; text-decoration: none; font-size: 34px; color: #a89274;">
-    GROUPOMANIA
+    Authentification en React avec Firebase
 </h2>
-<div align="center">
-    <video src="./src/Assets/capt-docs/videoTest1.mp4" width=640  height=480 controls poster="vignette.jpg">
-        Cette vidéo ne peut être affichée sur votre navigateur Internet.
-    </video>
-    <p align="center">
-    <a href="/" style="text-decoration: none;">
-        <img src="https://i.gyazo.com/72098cf1f39d3db6c6fd23d68260626d.png" width="800" alt="Groupomania Home"/>
-    </a>
-</p>
-</div>
+
 
 
 # Getting Started with Create React App
