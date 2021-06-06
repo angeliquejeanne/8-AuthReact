@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './Navbar.css'
 import logoleftfont from '../../Assets/images/logo-monochrome-white.svg'
 import { useDispatch } from 'react-redux'
+import {AuthContext} from '../../Context/AuthContext'
 
 export default function Navbar() {
 
@@ -17,6 +18,7 @@ export default function Navbar() {
             type: "TOGGLEUP"
         })
     }
+    const {logout} = useContext(AuthContext)
 
     return (
         <nav className="navbar">
@@ -26,7 +28,7 @@ export default function Navbar() {
             <div className="right">
                 <button onClick={toggleLogin}>Login</button>
                 <button onClick={toggleSignUP}>SignUp</button>
-                <button>Déconnexion</button>
+                <button onClick={logout}>Déconnexion</button>
             </div>
         </nav>
     )
