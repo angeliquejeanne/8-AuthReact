@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   padding-right: 5px;
-  position: absolute;
+  position: relative;
   z-index: 10;
   top: 0;
   left: 0;

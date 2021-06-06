@@ -20,6 +20,12 @@ export default function SignUp() {
         })
     }
 
+    const toggleLogin = () => {
+        dispatch({
+            type: "TOGGLEIN"
+        })
+    }
+
     async function handleSubmit(e) {
         e.preventDefault();
 
@@ -29,15 +35,8 @@ export default function SignUp() {
         }
 
         await signup(inputs.current[0].value, inputs.current[1].value);
-        // history.push("/loggedHome");
-        dispatch({
-            type: "CLOSEMODAL"
-        })
-
-        inputs.current.forEach(inp => {
-            inp.value = "";
-        })
-        setError("")
+        closeModal()
+        history.push('/loggedHome');
     }
 
     const inputs = useRef([])
@@ -74,7 +73,10 @@ export default function SignUp() {
                     <button className="btn-sign-up">Inscription</button>
                 </form>
                 <button onClick={closeModal} className="btn-close">x</button>
-                <p className="bottom-help-txt">
+                <p 
+                    onClick={toggleLogin}
+                    className="bottom-help-txt"
+                >
                     Vous avez déjà un compte ?
                 </p>
             </div>

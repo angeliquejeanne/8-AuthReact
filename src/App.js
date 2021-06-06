@@ -1,17 +1,24 @@
 import './App.css';
-import Home from './Pages/Home/Home'
-import Login from './Components/AuthForm/Login'
-import SignUp from './Components/AuthForm/SignUp'
 import logoleftfont from './Assets/images/icon.svg'
-import {AuthProvider} from './Context/AuthContext'
+import Home from "./Pages/Home/Home";
+import { AuthProvider } from "./Context/AuthContext";
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import PrivateHome from './Pages/PrivateHome/PrivateHome'
+import PrivateRoute from './Components/PrivateRoute'
 
 function App() {
   return (
-    <>
-      <AuthProvider>
-        <Home />
-      </AuthProvider>  
-    </>
+
+    <AuthProvider>
+      <Router>
+
+      
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <PrivateRoute exact path="/loggedHome" component={PrivateHome} />
+      </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 
